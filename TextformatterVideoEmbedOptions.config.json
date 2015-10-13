@@ -1,0 +1,184 @@
+{
+      "yt_autohide": {
+        "type": null,
+        "value": 2,
+        "label": "YouTube: Autohide",
+        "description": "This parameter indicates whether the video controls will automatically hide after a video begins playing. This parameter has been deprecated for HTML5 players, which display or hide the video progress bar and player controls automatically",
+        "notes": "Defaults and details: https://developers.google.com/youtube/player_parameters"
+      },
+      "yt_autoplay": {
+        "type": null,
+        "value": 0,
+        "label": "YouTube: Autoplay",
+        "description": "This parameter specifies whether the initial video will automatically start to play when the player loads. Supported values are 0 or 1.",
+        "notes": "The default value is 0"
+      },
+      "yt_cc_load_policy": {
+        "type": null,
+        "value": 0,
+        "label": "YouTube: Closed Captions",
+        "description": "Setting the parameters value to 1 causes closed captions to be shown by default, even if the user has turned captions off.",
+        "notes": "The default behavior is based on user preference."
+      },
+      "yt_color": {
+        "type": null,
+        "value": "red",
+        "label":"YouTube: Progressbar Color",
+        "description":"This parameter specifies the color that will be used in the players video progress bar to highlight the amount of the video that the viewer has already seen.",
+        "notes":"Valid parameter values are red and white, and, by default, the player uses the color red. Setting the color parameter to white will disable the modestbranding option."
+      },
+      "yt_controls": {
+        "type": null,
+        "value": 1,
+        "label":"YouTube: Display Player Controls",
+        "description":"This parameter indicates whether the video player controls are displayed.",
+        "notes":"Default: 1. details: https://developers.google.com/youtube/player_parameters"
+      },
+      "yt_disablekb": {
+        "type": null,
+        "value": 0,
+        "label": "YouTube: Disable Keyboard Control",
+        "description": "Setting the parameters value to 1 causes the player to respond to keyboard controls.",
+        "notes": "Default: 0"
+      },
+      "yt_enablejsapi": {
+        "type": null,
+        "value": 0,
+        "label":"YouTube: Enable JS API Calls",
+        "description":"Setting the parameters value to 1 enables the player to be controlled via IFrame or JavaScript Player API calls. ",
+        "notes":"The default value is 0, which means that the player cannot be controlled using those APIs. For more information on the IFrame API and how to use it, see the IFrame API documentation. (The JavaScript Player API has already been deprecated.)"
+      },
+      "yt_end": {
+        "type": null,
+        "value": null,
+        "label": "YouTube: Stop Video at ...",
+        "description":"This parameter specifies the time, measured in seconds from the start of the video, when the player should stop playing the video. The parameter value is a positive integer.",
+        "notes":"Note that the time is measured from the beginning of the video and not from either the value of the start player parameter."
+      },
+      "yt_fs": {
+        "type": null,
+        "value": 1,
+        "label":"YouTube: Display Fullscreen Button",
+        "description":"Setting this parameter to 0 prevents the fullscreen button from displaying in the player.",
+        "notes":"Default: 1"
+      },
+      "yt_hl": {
+        "type": null,
+        "value": "",
+        "label":"YouTube: Interface Language",
+        "description":"Sets the players interface language.",
+        "notes":"Details: https://developers.google.com/youtube/player_parameters"
+      },
+      "yt_iv_load_policy": {
+        "type": null,
+        "value": 1,
+        "label":"YouTube: Annotations Behavior",
+        "description":"Setting the parameters value to 1 causes video annotations to be shown by default, whereas setting to 3 causes video annotations to not be shown by default. ",
+        "notes":"Default: 1"
+      },
+      "yt_loop": {
+        "type": null,
+        "value": 0,
+        "label":"YouTube: Loop",
+        "description":"In the case of a single video player, a setting of 1 causes the player to play the initial video again and again. In the case of a playlist player (or custom player), the player plays the entire playlist and then starts again at the first video.",
+        "notes": "Default: 0"
+      },
+      "yt_modestbranding": {
+        "type": null,
+        "value": 0,
+        "label": "YouTube: Modestbranding",
+        "description": "This parameter lets you use a YouTube player that does not show a YouTube logo. Set the parameter value to 1 to prevent the YouTube logo from displaying in the control bar.",
+        "notes":""
+      },
+      "yt_origin": {
+        "type": null,
+        "value": "",
+        "label":"YouTube: Origin Domain",
+        "description": "This parameter provides an extra security measure for the IFrame API and is only supported for IFrame embeds.",
+        "notes": "If you are using the IFrame API, which means you are setting the enablejsapi parameter value to 1, you should always specify your domain as the origin parameter value."
+      },
+      "yt_playsinline": {
+        "type": null,
+        "value": 0,
+        "label":"YouTube: Plays Inline",
+        "description":"This parameter controls whether videos play inline or fullscreen in an HTML5 player on iOS. Valid values are:",
+        "notes":""
+      },
+      "yt_rel": {
+        "type": null,
+        "value": 1,
+        "label":"YouTube: Show Related Videos at the End",
+        "description": "This parameter indicates whether the player should show related videos when playback of the initial video ends.",
+        "notes": "Supported values are 0 and 1. The default value is 1."
+      },
+      "yt_showinfo": {
+        "type": null,
+        "value": 0,
+        "label":"YouTube: Show Info",
+        "description":"Supported values are 0 and 1.",
+        "notes": "Default: 0"
+      },
+      "yt_start": {
+        "type": null,
+        "value": null,
+        "label":"YouTube: Start",
+        "description": "This parameter causes the player to begin playing the video at the given number of seconds from the start of the video.",
+        "notes": "Details: https://developers.google.com/youtube/player_parameters"
+      },
+      "vm_autopause": {
+        "type": null,
+        "value": 1,
+        "label": "Vimeo: Autopause",
+        "description":"Enables or disables pausing this video when another video is played.",
+        "notes":"Defaults to 1."
+      },
+      "vm_autoplay": {
+        "type": null,
+        "value": 0,
+        "label": "Vimeo: Autoplay",
+        "description":"Play the video automatically on load.",
+        "notes":"Defaults to 0. Note that this won’t work on some devices."
+      },
+      "vm_badge": {
+        "type": null,
+        "value": 1,
+        "label": "Vimeo: Show Badge",
+        "description": "Enables or disables the badge on the video.",
+        "notes": "Defaults to 1."
+      },
+      "vm_byline": {
+        "type": null,
+        "value": 1,
+        "label": "Vimeo: Show Users byline",
+        "description": "Show the users byline on the video.",
+        "notes": "Defaults to 1."
+      },
+      "vm_color": {
+        "type":  null,
+        "value": "00adef",
+        "label": "Vimeo: Player Color",
+        "description": "Specify the color of the video controls.",
+        "notes": "Defaults to 00adef. Make sure that you don’t include the #."
+      },
+      "vm_loop": {
+        "type": null,
+        "value": 0,
+        "label": "Vimeo: Loop",
+        "description": "Play the video again when it reaches the end.",
+        "notes": "Defaults to 0."
+      },
+      "vm_portrait": {
+        "type": null,
+        "value": 1,
+        "label": "Vimeo: Show User Portrait",
+        "description": "Show the user’s portrait on the video.",
+        "notes": "Defaults to 1."
+      },
+      "vm_title": {
+        "type": null,
+        "value": 1,
+        "label": "Vimeo: Show Title",
+        "description": "Show the title on the video.",
+        "notes": "Defaults to 1."
+     }
+  }
