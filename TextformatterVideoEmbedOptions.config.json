@@ -1,4 +1,11 @@
 {
+      "yt_wmode": {
+        "type": null,
+        "value": "",
+        "label": "YouTube: WMode (undocumented)",
+        "description": "Undocumented parameter to set \"wmode\". Set to \"opaque\" or \"transparent\" Helpful for display problems as documented in the notes below.",
+        "notes": "Default: Leave blank. Overlay issue: https://duckduckgo.com/?q=youtube+wmode+issue&t=osx&ia=qa"
+      },
       "yt_autohide": {
         "type": null,
         "value": 2,
@@ -11,7 +18,7 @@
         "value": 0,
         "label": "YouTube: Autoplay",
         "description": "This parameter specifies whether the initial video will automatically start to play when the player loads. Supported values are 0 or 1.",
-        "notes": "The default value is 0"
+        "notes": "Default: 0"
       },
       "yt_cc_load_policy": {
         "type": null,
