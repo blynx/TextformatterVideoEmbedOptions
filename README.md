@@ -17,5 +17,5 @@ Add this Textformatter in the details tab of the desired Textfield. If you use a
 
 ## Links
 
-[Module page on processwire.com](http://modules.processwire.com/modules/textformatter-video-embed-options/)
+[Module page on processwire.com](http://modules.processwire.com/modules/textformatter-video-embed-options/)  
 [Support for this module](https://processwire.com/talk/topic/11160-textformattervideoembedoptions/)
