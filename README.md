@@ -4,7 +4,7 @@ Adds possibility to set global options for all embedded YouTube and Vimeo videos
 
 Parameter references: 
 
-https://developers.google.com/youtube/player_parameters
+https://developers.google.com/youtube/player_parameters  
 https://developer.vimeo.com/apis/oembed
 
 ## Installation
