@@ -6,8 +6,7 @@
  * An addition to TextformatterVideoEmbed for Youtube videos
  *
  * @todo yt_playerapiid & vimeo id: function to generate different ids for multiple videos on page
- * @todo it should not matter if this one runs before or after video embed ... 
- *       OR it shoulds somehow automatically decide
+ *       ... ?
  * @todo what about playlists?
  *
  */
@@ -24,16 +23,12 @@ class TextformatterVideoEmbedOptions extends Textformatter implements Configurab
 
 		return array(
 			'title' => 'Apply options for embedded YouTube and Vimeo videos',
-			'version' => 033,
+			'version' => '0.3.4',
 			'summary' => 'Set options for embedded YouTube and Vimeo videos. Must run after e.g. TextformatterVideoEmbed! For detailed documentation the options, see: https://developers.google.com/youtube/player_parameters or https://developer.vimeo.com/player/embedding',
 			'href' => 'https://processwire.com/talk/topic/11160-textformattervideoembedoptions/',
 			'author' => 'Steffen Henschel'
 			);
 	}
-
-	protected static $configDefaultsJSON;
-	
-	protected static $configDefaults;
 
 	/**
 	 * Data as used by the get/set functions
@@ -41,16 +36,15 @@ class TextformatterVideoEmbedOptions extends Textformatter implements Configurab
 	 */
 	protected $data = array();
 
+
+
 	/**
-	 * load defaults
+	 * default config
 	 * 
 	 */
-	private static function loadDefaults() {
-		// $defaultConfigFile = __DIR__.DIRECTORY_SEPARATOR.self::class.".config.json";
-		$defaultConfigFile = __DIR__.DIRECTORY_SEPARATOR."TextformatterVideoEmbedOptions.config.json";
-		self::$configDefaultsJSON = file_get_contents($defaultConfigFile);
-		self::$configDefaults = wireDecodeJSON(self::$configDefaultsJSON);
-	}
+	protected static $configDefaults;
+
+
 
 	/**
 	 * Set our configuration defaults
@@ -61,6 +55,20 @@ class TextformatterVideoEmbedOptions extends Textformatter implements Configurab
 		self::loadDefaults();
 	}
 
+
+
+	/**
+	 * load defaults
+	 * 
+	 */
+	private static function loadDefaults() {
+		// $defaultConfigFile = __DIR__.DIRECTORY_SEPARATOR.self::class.".config.json";
+		$defaultConfigFile = __DIR__.DIRECTORY_SEPARATOR."TextformatterVideoEmbedOptions.config.json";
+		self::$configDefaults = wireDecodeJSON(file_get_contents($defaultConfigFile));
+	}
+
+
+
 	/**
 	 * Text formatting function as used by the Textformatter interface
 	 *
@@ -69,8 +77,9 @@ class TextformatterVideoEmbedOptions extends Textformatter implements Configurab
 
 		if (isset($this->data)) {
 			// perform a strpos fast check before performing regex check
-			if (strpos($str, "youtube.com/embed") !== false) $this->modifyYoutube($str);
-			if (strpos($str, "player.vimeo.com") !== false) $this->modifyVimeo($str);
+			// checks for already embedded videos
+			if (strpos($str, "youtube.com/embed") !== false) $this->applyYoutube($str);
+			if (strpos($str, "player.vimeo.com") !== false) $this->applyVimeo($str);
 		}			
 	}
 
@@ -78,7 +87,7 @@ class TextformatterVideoEmbedOptions extends Textformatter implements Configurab
 	 * Check for Youtube embeds and add parameters
 	 *
 	 */
-	protected function modifyYoutube(&$str) {
+	protected function applyYoutube(&$str) {
 
 		$regex = "/https?:\/\/(?:www\.)?youtu(?:.be|be.com)+\/embed\/[^\s\'\"]+/";
 		if(!preg_match_all($regex, $str, $matches)) return;
@@ -100,7 +109,7 @@ class TextformatterVideoEmbedOptions extends Textformatter implements Configurab
 	 * Check for Vimeo embeds and add parameters
 	 *
 	 */
-	protected function modifyVimeo(&$str) {
+	protected function applyVimeo(&$str) {
 
 		$regex = "/https?:\/\/player\.vimeo\.com\/video\/[^\s\'\"]+/";
 		if(!preg_match_all($regex, $str, $matches)) return;
@@ -117,6 +126,10 @@ class TextformatterVideoEmbedOptions extends Textformatter implements Configurab
 			$str = str_replace($line, $extended_line, $str); 
 		}
 	}
+
+
+
+
 
 	/**
 	 * Module configuration screen
@@ -164,7 +177,6 @@ class TextformatterVideoEmbedOptions extends Textformatter implements Configurab
 		return $inputfields; 		
 	}
 
-#####
 
 	/**
 	 * The following functions are to support the ConfigurableModule interface

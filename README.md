@@ -2,9 +2,14 @@
 
 Adds possibility to set global options for all embedded YouTube and Vimeo videos. Nearly all options are implemented as provided by the platforms.
 
+Parameter references: 
+
+https://developers.google.com/youtube/player_parameters
+https://developer.vimeo.com/apis/oembed
+
 ## Installation
 
-The Processwire way.
+[The Processwire way.](http://modules.processwire.com/install-uninstall/)
 
 ## How to use
 
@@ -12,5 +17,5 @@ Add this Textformatter in the details tab of the desired Textfield. If you use a
 
 ## Links
 
-[ProcessWire modules page](http://modules.processwire.com/modules/textformatter-video-embed-options/)
-[ProcessWire Forum](https://processwire.com/talk/topic/11160-textformattervideoembedoptions/)
+[Module page on processwire.com](http://modules.processwire.com/modules/textformatter-video-embed-options/)
+[Support for this module](https://processwire.com/talk/topic/11160-textformattervideoembedoptions/)
