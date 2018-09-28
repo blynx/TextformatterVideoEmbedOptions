@@ -23,7 +23,7 @@ class TextformatterVideoEmbedOptions extends Textformatter implements Configurab
 
 		return array(
 			'title' => 'Apply options for embedded YouTube and Vimeo videos',
-			'version' => '0.3.5',
+			'version' => '0.3.6',
 			'summary' => 'Set options for embedded YouTube and Vimeo videos. Must run after e.g. TextformatterVideoEmbed! For detailed documentation the options, see: https://developers.google.com/youtube/player_parameters or https://developer.vimeo.com/player/embedding',
 			'href' => 'https://processwire.com/talk/topic/11160-textformattervideoembedoptions/',
 			'author' => 'Steffen Henschel'
@@ -97,10 +97,12 @@ class TextformatterVideoEmbedOptions extends Textformatter implements Configurab
 		 	// append ? if not present
 		 	if (!strpos($extended_line, "?")) $extended_line .= "?";
 			foreach ($this->data as $key => $value) {
+			    if($key==='yt_nocookies') continue;
 				if (strpos($key, "yt_") === 0 && $value != self::$configDefaults[$key]["value"]) {
 					$extended_line .= "&".substr($key, 3)."=$value";
 				}
 			}
+			if($this->yt_nocookies) $extended_line = str_replace('youtube.com', 'youtube-nocookie.com', $extended_line);
 			$str = str_replace($line, $extended_line, $str); 
 		}
 	}
