@@ -125,6 +125,13 @@
         "description":"Supported values are 0 and 1. \nSetting the parameter's value to 0 causes the player to not display information like the video title and uploader before the video starts playing.",
         "notes": "Default: 1"
     },
+    "yt_nocookies": {
+        "type": null,
+        "value": 0,
+        "label":"YouTube: Enable privacy-enhanced mode",
+        "description":"When you turn on privacy-enhanced mode, YouTube won't store information about visitors on your website unless they play the video.",
+        "notes": "Supported values are 0 and 1. The default value is 0."
+    },
     "yt_start": {
         "type": null,
         "value": null,
