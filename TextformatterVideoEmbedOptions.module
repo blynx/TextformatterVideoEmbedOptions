@@ -79,6 +79,7 @@ class TextformatterVideoEmbedOptions extends Textformatter implements Configurab
 			// perform a strpos fast check before performing regex check
 			// checks for already embedded videos
 			if (strpos($str, "youtube.com/embed") !== false) $this->applyYoutube($str);
+			if (strpos($str, "youtube-nocookie.com/embed") !== false) $this->applyYoutube($str);
 			if (strpos($str, "player.vimeo.com") !== false) $this->applyVimeo($str);
 		}			
 	}
@@ -89,7 +90,7 @@ class TextformatterVideoEmbedOptions extends Textformatter implements Configurab
 	 */
 	protected function applyYoutube(&$str) {
 
-		$regex = "/https?:\/\/(?:www\.)?youtu(?:.be|be.com)+\/embed\/[^\s\'\"]+/";
+		$regex = "/https?:\/\/(?:www\.)?youtu(?:.be|be.com|be-nocookie.com)+\/embed\/[^\s\'\"]+/";
 		if(!preg_match_all($regex, $str, $matches)) return;
 
 		foreach($matches[0] as $key => $line) { 
