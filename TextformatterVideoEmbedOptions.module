@@ -23,7 +23,7 @@ class TextformatterVideoEmbedOptions extends Textformatter implements Configurab
 
 		return array(
 			'title' => 'Apply options for embedded YouTube and Vimeo videos',
-			'version' => '0.3.6',
+			'version' => '0.4.0',
 			'summary' => 'Set options for embedded YouTube and Vimeo videos. Must run after e.g. TextformatterVideoEmbed! For detailed documentation the options, see: https://developers.google.com/youtube/player_parameters or https://developer.vimeo.com/player/embedding',
 			'href' => 'https://processwire.com/talk/topic/11160-textformattervideoembedoptions/',
 			'author' => 'Steffen Henschel'
