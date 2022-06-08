@@ -194,5 +194,12 @@
         "label": "Vimeo: Show Title",
         "description": "Show the title on the video.",
         "notes": "Defaults to 1."
+    },
+    "vm_dnt": {
+        "type": null,
+        "value": true,
+        "label": "Vimeo: Do Not Track",
+        "description": "Setting this parameter to "true" will block the player from tracking any session data, including all cookies and analytics. (Will have the same effect as enabling a Do Not Track setting in your browser).",
+        "notes": "Defaults to true here. (Vimeos default is false, though)."
     }
 }
