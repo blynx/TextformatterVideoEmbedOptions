@@ -197,9 +197,9 @@
     },
     "vm_dnt": {
         "type": null,
-        "value": "true",
+        "value": 1,
         "label": "Vimeo: Do Not Track",
-        "description": "Setting this parameter to \"true\" will block the player from tracking any session data, including all cookies and analytics. (Will have the same effect as enabling a Do Not Track setting in your browser).",
-        "notes": "Defaults to true here. (Vimeos default is false, though)."
+        "description": "Setting this parameter to 1 will block the player from tracking any session data, including all cookies and analytics. (Will have the same effect as enabling a Do Not Track setting in your browser).",
+        "notes": "Defaults to 1 here. (Vimeos default is 0, though)."
     }
 }
